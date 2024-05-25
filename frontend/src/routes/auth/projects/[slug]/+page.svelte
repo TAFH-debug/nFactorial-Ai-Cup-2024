@@ -4,7 +4,7 @@
     function del() {
         const token = btoa(data.username + ":" + data.password);
         console.log(data.username);
-        fetch("http://localhost:8000/project/delete", {
+        fetch("http://127.0.0.1:8000/project/delete", {
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,
@@ -24,7 +24,7 @@
     function generate_image() {
         const token = btoa(data.username + ":" + data.password);
         console.log(data.username);
-        fetch("http://localhost:8000/project/generate_image/", {
+        fetch("http://127.0.0.1:8000/project/generate_image/", {
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,
@@ -41,7 +41,7 @@
 </script>
 
 <div class="project" data-sveltekit-reload>
-    <img src={"http://localhost:8000/images/" + data.image} alt=""/>
+    <img src={"http://127.0.0.1:8000/images/" + data.image} alt=""/>
     <div>
         <div class="project_title">
             {data.project_name}

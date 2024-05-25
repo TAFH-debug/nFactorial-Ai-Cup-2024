@@ -1,7 +1,7 @@
 export async function load({ fetch, cookies, params }) {
     const data = btoa(cookies.get('username') + ":" + cookies.get('password'));
 
-    const res = await fetch("http://localhost:8000/dialog/get_all/", {
+    const res = await fetch("http://127.0.0.1:8000/dialog/get_all/", {
         method: "POST",
         headers: {
             'Accept': 'application/json',
@@ -14,7 +14,7 @@ export async function load({ fetch, cookies, params }) {
     })
     .then((res) => res.json())
 
-    const entities = await fetch("http://localhost:8000/character/get_all/", {
+    const entities = await fetch("http://127.0.0.1:8000/character/get_all/", {
         method: "POST",
         headers: {
             Authorization: `Basic ${data}`,
