@@ -5,6 +5,7 @@
         const token = btoa(data.username + ":" + data.password);
         console.log(data.username);
         fetch("http://127.0.0.1:8000/project/delete", {
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,
@@ -25,6 +26,7 @@
         const token = btoa(data.username + ":" + data.password);
         console.log(data.username);
         fetch("http://127.0.0.1:8000/project/generate_image/", {
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,

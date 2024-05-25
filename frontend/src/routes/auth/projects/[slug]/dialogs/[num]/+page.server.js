@@ -4,6 +4,7 @@ export async function load ({ params, cookies, fetch }) {
     const res = await fetch(
         "http://127.0.0.1:8000/dialog/get_messages/",
         {
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,

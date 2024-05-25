@@ -6,6 +6,7 @@ export const actions = {
         const password = data.get('password');
 
         const res1 = await fetch("http://127.0.0.1:8000/auth/register/", {
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 'Accept': 'application/json',
@@ -23,6 +24,7 @@ export const actions = {
         
         const dt = btoa(username + ":" + password);
         const res = await fetch("http://127.0.0.1:8000/auth/basic-auth/", {
+            mode: 'no-cors',
             headers: {
                 Authorization: `Basic ${dt}`
             }

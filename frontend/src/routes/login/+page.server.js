@@ -8,6 +8,7 @@ export const actions = {
 
         const dt = btoa(username + ":" + password);
         const res = await fetch("http://127.0.0.1:8000/auth/basic-auth/", {
+            mode: 'no-cors',
             headers: {
                 Authorization: `Basic ${dt}`
             }

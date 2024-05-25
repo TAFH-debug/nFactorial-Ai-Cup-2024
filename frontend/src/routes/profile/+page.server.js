@@ -5,6 +5,7 @@ export async function load({ cookies }) {
     const password = cookies.get("password");
     if (username && password) {
         const resp = await fetch("http://127.0.0.1:8000/auth/check-auth/", {
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 Authorization: `Basic ${username}:${password}`,

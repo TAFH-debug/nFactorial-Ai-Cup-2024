@@ -7,6 +7,7 @@
         fetch(
             "http://127.0.0.1:8000/dialog/generate/",
             {
+                mode: 'no-cors',
                 method: "POST",
                 headers: {
                     Authorization: `Basic ${token}`,

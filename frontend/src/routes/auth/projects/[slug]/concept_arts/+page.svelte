@@ -21,6 +21,7 @@
 
         document.getElementById("loading").style.display = "block";
         fetch("http://127.0.0.1:8000/concept_art/generate/", {
+            mode: 'no-cors',
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,
