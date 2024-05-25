@@ -10,7 +10,7 @@
 
         const token = btoa(username + ":" + password);
         fetch(
-            "http://127.0.0.1:8000/character/change",
+            "http://165.227.130.2:8000/character/change",
             {
                 
                 method: "POST",
@@ -33,7 +33,7 @@
         const token = btoa(username + ":" + password);
         document.getElementById("loading").style.display = "block";
         fetch(
-            "http://127.0.0.1:8000/character/delete",
+            "http://165.227.130.2:8000/character/delete",
             {
                 
                 method: "POST",
@@ -54,7 +54,7 @@
 </script>
 
 <div href={"/auth/characters/" + character.id} id={character.id} class="character">
-    <!-- <img alt="" src={"http://127.0.0.1:8000/images/" + character.image} /> -->
+    <!-- <img alt="" src={"http://165.227.130.2:8000/images/" + character.image} /> -->
     <div class="input_cont">
         <div class="character_param">Name:</div>
         <input id="name" bind:value={character.name} />

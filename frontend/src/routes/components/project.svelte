@@ -3,7 +3,7 @@
 </script>
 
 <a href={"/auth/projects/" + project.id} id={project.id} class="project">
-    <img alt="" src={"http://127.0.0.1:8000/images/" + project.image} />
+    <img alt="" src={"http://165.227.130.2:8000/images/" + project.image} />
     <div class="project_title">{project.project_name}</div>
     <div class="project_description">{project.project_description}</div>
 </a>
