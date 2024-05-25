@@ -20,7 +20,7 @@
         const desc = document.getElementById("popup_input").value;
 
         document.getElementById("loading").style.display = "block";
-        fetch("http://localhost:8000/concept_art/generate/", {
+        fetch("http://127.0.0.1:8000/concept_art/generate/", {
             
             method: "POST",
             headers: {

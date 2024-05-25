@@ -5,7 +5,7 @@ export const actions = {
         const username = data.get('username');
         const password = data.get('password');
 
-        const res1 = await fetch("http://localhost:8000/auth/register/", {
+        const res1 = await fetch("http://127.0.0.1:8000/auth/register/", {
             
             method: "POST",
             headers: {
@@ -23,7 +23,7 @@ export const actions = {
         }
         
         const dt = btoa(username + ":" + password);
-        const res = await fetch("http://localhost:8000/auth/basic-auth/", {
+        const res = await fetch("http://127.0.0.1:8000/auth/basic-auth/", {
             
             headers: {
                 Authorization: `Basic ${dt}`
