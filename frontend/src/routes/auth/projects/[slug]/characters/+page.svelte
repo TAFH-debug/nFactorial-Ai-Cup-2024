@@ -20,7 +20,8 @@
         const name = document.getElementById("name").value;
 
         const token = btoa(data.username + ":" + data.password);
-        fetch("http://127.0.0.1:8000/character/create/", {
+        fetch("http://localhost:8000/character/create/", {
+            
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,
@@ -41,7 +42,8 @@
     function generate() {
         const token = btoa(data.username + ":" + data.password);
         document.getElementById("loading").style.display = "block";
-        fetch("http://127.0.0.1:8000/character/generate/", {
+        fetch("http://localhost:8000/character/generate/", {
+            
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,

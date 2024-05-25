@@ -19,7 +19,8 @@
         const id = document.getElementById("popup_select").value;
         const desc = document.getElementById("popup_input").value;
         document.getElementById("loading").style.display = "block";
-        fetch("http://127.0.0.1:8000/asset/generate/", {
+        fetch("http://localhost:8000/asset/generate/", {
+            
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,

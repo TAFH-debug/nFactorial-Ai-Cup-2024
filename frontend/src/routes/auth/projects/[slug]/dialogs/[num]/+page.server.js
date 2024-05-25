@@ -2,9 +2,9 @@ export async function load ({ params, cookies, fetch }) {
     const token = btoa(cookies.get('username') + ":" + cookies.get("password"))
 
     const res = await fetch(
-        "http://127.0.0.1:8000/dialog/get_messages/",
+        "http://localhost:8000/dialog/get_messages/",
         {
-            mode: 'no-cors',
+            
             method: "POST",
             headers: {
                 Authorization: `Basic ${token}`,

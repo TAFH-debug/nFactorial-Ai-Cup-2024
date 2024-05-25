@@ -11,8 +11,9 @@
         const token = btoa(username + ":" + password);
         document.getElementById("loading").style.display = "block";
         fetch(
-            "http://127.0.0.1:8000/dialog/delete",
+            "http://localhost:8000/dialog/delete",
             {
+                
                 method: "POST",
                 headers: {
                     Authorization: `Basic ${token}`,

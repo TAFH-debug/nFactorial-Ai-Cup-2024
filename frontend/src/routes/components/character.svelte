@@ -10,8 +10,9 @@
 
         const token = btoa(username + ":" + password);
         fetch(
-            "http://127.0.0.1:8000/character/change",
+            "http://localhost:8000/character/change",
             {
+                
                 method: "POST",
                 headers: {
                     Authorization: `Basic ${token}`,
@@ -32,8 +33,9 @@
         const token = btoa(username + ":" + password);
         document.getElementById("loading").style.display = "block";
         fetch(
-            "http://127.0.0.1:8000/character/delete",
+            "http://localhost:8000/character/delete",
             {
+                
                 method: "POST",
                 headers: {
                     Authorization: `Basic ${token}`,
@@ -52,7 +54,7 @@
 </script>
 
 <div href={"/auth/characters/" + character.id} id={character.id} class="character">
-    <!-- <img alt="" src={"http://127.0.0.1:8000/images/" + character.image} /> -->
+    <!-- <img alt="" src={"http://localhost:8000/images/" + character.image} /> -->
     <div class="input_cont">
         <div class="character_param">Name:</div>
         <input id="name" bind:value={character.name} />
