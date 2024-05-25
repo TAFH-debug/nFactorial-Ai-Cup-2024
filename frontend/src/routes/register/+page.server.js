@@ -31,8 +31,8 @@ export const actions = {
         if(!res.ok) {
             throw redirect(302, "/register?error");
         }
-        cookies.set('username', username, { path: "/" });
-        cookies.set('password', password, { path: "/" });
+        cookies.set('username', username, { secure: false, path: "/" });
+        cookies.set('password', password, { secure: false, path: "/" });
         throw redirect(302, "/");
     }
 };
