@@ -3,7 +3,7 @@
 
     function del() {
         const token = btoa(data.username + ":" + data.password);
-        console.log(data.username);
+        document.getElementById("loading").display = "block";
         fetch("http://165.227.130.2:8000/project/delete", {
             
             method: "POST",
@@ -19,12 +19,11 @@
             goto("/auth/dashboard")
             document.getElementById("loading").style.display = "none";
         })
-        document.getElementById("loading").display = "block";
     }
 
     function generate_image() {
         const token = btoa(data.username + ":" + data.password);
-        console.log(data.username);
+        document.getElementById("loading").display = "block";
         fetch("http://165.227.130.2:8000/project/generate_image/", {
             
             method: "POST",
@@ -36,7 +35,10 @@
             body: JSON.stringify({
                 id: data.id
             })
-        }).then((e) => goto("/auth/dashboard"))
+        }).then((e) => {
+            goto("/auth/dashboard")
+            document.getElementById("loading").style.display = "none";
+        })
     }
 
     export let data;
