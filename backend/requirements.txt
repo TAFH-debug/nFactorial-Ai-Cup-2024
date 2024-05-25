@@ -5,5 +5,6 @@ databases
 asyncpg
 pydantic
 sqlmodel
+openai
 psycopg2-binary
 requests
